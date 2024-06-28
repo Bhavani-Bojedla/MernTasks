@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse String</title>
+    <style>
+        body{
+            margin-top: 15rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <label for="word"  style="font-size: 1.5rem;">Number:</label>
+    <input placeholder="enter a number" type="number" oninput="handler()" id="word"  style="font-size: 1.3rem;">
+    <br>
+    <br>
+    <span style="font-size: 1.5rem;">reversed value :</span>
+    <span id="reverse" style="font-size: 1.5rem;"></span>
+
+    <script>
+        function handler(){
+            let word = document.getElementById("word").value;
+            let rev = '';
+            for (let i = word.length - 1; i >= 0; i--) {
+                rev += word[i];
+            }
+            document.getElementById("reverse").innerText =rev;
+        }
+    </script>
+</body>
+</html>

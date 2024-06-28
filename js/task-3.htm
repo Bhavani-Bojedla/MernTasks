@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        margin-top: 15rem;
+      }
+      .container {
+        border: 1px solid black;
+        height: 12rem;
+        width: 20rem;
+        padding: 2rem;
+      }
+      .box {
+        padding: 0.5rem;
+        font-size: large;
+      }
+      input {
+        font-size: medium;
+      }
+      .box button {
+        font-size: medium;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <span>1st Number: </span>
+        <input placeholder="Enter a number" type="number" id="one" />
+      </div>
+      <div class="box">
+        <span>2st Number: </span>
+        <input placeholder="Enter a number" type="number" id="two" />
+      </div>
+      <div class="box">
+        <button id="btn1">Multiply</button>
+        <button id="btn2">Divide</button>
+      </div>
+      <div class="box">
+        <p>The result is:</p>
+        <p id="result"></p>
+      </div>
+    </div>
+
+    <script>
+      let btn1 = document.getElementById("btn1");
+      let btn2 = document.getElementById("btn2");
+      let result = document.getElementById("result");
+
+      btn1.addEventListener("click", () => {
+        let num1 = document.getElementById("one").value;
+        let num2 = document.getElementById("two").value;
+        let Product = parseInt(num1) * parseInt(num2);
+        result.innerText = Product;
+      });
+
+      btn2.addEventListener("click", () => {
+        let num1 = document.getElementById("one").value;
+        let num2 = document.getElementById("two").value;
+        let divide = parseInt(num1) / parseInt(num2);
+        result.innerText = divide;
+      });
+    </script>
+  </body>
+</html>

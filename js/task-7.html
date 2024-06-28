@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body{
+        display: flex;
+        justify-content: center;
+      }
+      .container{
+          margin-top: 5rem;
+      }
+      img{
+        margin-top: 5rem;
+      }
+      h1{
+        margin-top: 7rem;
+        color: blue;
+      }
+      .buttons{
+        margin-left: 20rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+    <img src="train.png" alt="error" id="mycar" />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <h1>Click the following buttons to handle animations</h1>
+    <div class="buttons">
+    <input type="button" value="start" onclick="start()" />
+    <input type="button" value="stop" onclick="stop()" />
+  </div>
+  </div>
+
+
+
+    <script>
+      // to move my car
+      var animation;
+      function init() {
+        let mycar = document.getElementById("mycar");
+        mycar.style.position = "absolute";
+        mycar.style.left = "0px";
+      }
+      window.onload = init;
+
+      function start() {
+        let mycar = document.getElementById("mycar");
+        mycar.style.left = parseInt(mycar.style.left) + 10 + "px";
+        animation = setTimeout(start, 50);
+      }
+      function stop() {
+        let mycar = document.getElementById("mycar");
+        clearTimeout(animation);
+        mycar.style.left = "paused";
+      }
+    </script>
+  </body>
+</html>

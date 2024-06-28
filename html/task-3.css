@@ -1,0 +1,11 @@
+div{
+    background-color: rgb(216, 209, 209);
+    padding: 0.5rem;
+    border: 1px solid black;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 17rem;
+}

@@ -1,0 +1,15 @@
+table{
+    width:50%;
+    border-spacing: 2px;
+    margin: 0px auto;
+
+}
+table,th,td{
+    background-color: #9BD7D5;
+    border: 0.1px solid white;
+    border-collapse:collapse;
+    text-align: center;
+}
+body{
+    margin-top: 18rem;
+}

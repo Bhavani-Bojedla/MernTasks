@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        margin-top: 10rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button id="date" >Show date</button>
+      <div id="dateResult" style="margin-bottom: 10px;"></div>
+      <button id="time">Show time</button>
+      <div id="timeResult"></div>
+    </div>
+    <script>
+      let date = document.getElementById("date");
+      let time = document.getElementById("time");
+      let dateResult = document.getElementById("dateResult");
+      let timeResult = document.getElementById("timeResult");
+      const date1 = new Date();
+
+      date.addEventListener("click", () => {
+        dateResult.innerText = `${date1.getDate()}/${date1.toLocaleString(
+          "en-US",
+          { month: "long" }
+        )}/${date1.getFullYear()}`;
+      });
+      time.addEventListener("click", () => {
+        timeResult.innerText = Date();
+      });
+    </script>
+  </body>
+</html>

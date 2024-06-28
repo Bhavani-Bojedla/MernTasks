@@ -1,0 +1,52 @@
+table,
+tr,
+th,
+td {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  padding: 5px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+body {
+  background-color: rgb(170, 8, 89);
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+}
+.inner {
+  width: 40rem;
+  background-color: rgb(128, 8, 68);
+}
+label {
+  color: white;
+}
+textarea{
+    height: 3rem; 
+    width: 12rem;
+    color: rgb(134, 131, 127);
+}
+button {
+  font-weight: bold;
+  color: rgb(66, 66, 66);
+  width: 30rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: medium;
+  margin-top: 1rem;
+}
+select{
+    background-color:rgb(194, 186, 186) ; 
+    height: 2rem;
+}
+input {
+  padding: 3px;
+  width: 12rem;
+  height: 1.5rem;
+}

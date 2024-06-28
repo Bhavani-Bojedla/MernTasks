@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body{
+          margin-top: 15rem;
+          text-align: center;
+      }
+  </style>
+  </head>
+  <body>
+    <label for="word" style="font-size: 1.5rem">Word:</label>
+    <input
+      placeholder="enter a word"
+      type="text"
+      oninput="handler()"
+      id="word"
+      style="font-size: 1.3rem"
+    />
+    <br />
+    <br />
+    <span style="font-size: 1.5rem">Alphabetical order :</span>
+    <span id="reverse" style="font-size: 1.5rem"></span>
+    <script>
+      function handler() {
+        let word = document.getElementById("word").value;
+        let chars = word.split("");
+        for (let i = 0; i < chars.length; i++) {
+          for (let j = 0; j < chars.length - 1; j++) {
+            if (chars[j] > chars[j + 1]) {
+              let temp = chars[j];
+              chars[j] = chars[j + 1];
+              chars[j + 1] = temp;
+            }
+          }
+        }
+        let sortedWord = chars.join("");
+        document.getElementById("reverse").innerText = sortedWord;
+      }
+    </script>
+  </body>
+</html>
